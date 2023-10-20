@@ -1,0 +1,12 @@
+{
+  "hi": {
+    "message": "Hei",
+    "description": "Hallo der"
+  },
+  "How is it going?": {
+    "message": "Kordan går det?"
+  },
+  "extDescription": {
+    "message": "ScratchTools er kult"
+  }
+}
