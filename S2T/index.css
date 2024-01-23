@@ -1,0 +1,189 @@
+:root {
+    --text: #231902;
+    --background: #fffdf8;
+    --primary: #f3ba17;
+    --secondary: #81f873;
+    --accent: #ce76c9;
+    
+    --text-50: #fef7e7;
+    --text-100: #fcefcf;
+    --text-200: #f9de9f;
+    --text-300: #f7ce6e;
+    --text-400: #f4bd3e;
+    --text-500: #f1ad0e;
+    --text-600: #c18a0b;
+    --text-700: #916808;
+    --text-800: #604506;
+    --text-900: #302303;
+    --text-950: #181101;
+    
+    --background-50: #fff8e5;
+    --background-100: #fff1cc;
+    --background-200: #ffe299;
+    --background-300: #ffd466;
+    --background-400: #ffc533;
+    --background-500: #ffb700;
+    --background-600: #cc9200;
+    --background-700: #996e00;
+    --background-800: #664900;
+    --background-900: #332500;
+    --background-950: #1a1200;
+    
+    --primary-50: #fef8e7;
+    --primary-100: #fcf0cf;
+    --primary-200: #fae19e;
+    --primary-300: #f7d36e;
+    --primary-400: #f5c43d;
+    --primary-500: #f2b50d;
+    --primary-600: #c2910a;
+    --primary-700: #916d08;
+    --primary-800: #614805;
+    --primary-900: #302403;
+    --primary-950: #181201;
+    
+    --secondary-50: #e9fee7;
+    --secondary-100: #d3fccf;
+    --secondary-200: #a7fa9e;
+    --secondary-300: #7bf76e;
+    --secondary-400: #50f53d;
+    --secondary-500: #24f20d;
+    --secondary-600: #1dc20a;
+    --secondary-700: #159108;
+    --secondary-800: #0e6105;
+    --secondary-900: #073003;
+    --secondary-950: #041801;
+    
+    --accent-50: #f8ecf8;
+    --accent-100: #f1daf0;
+    --accent-200: #e4b4e2;
+    --accent-300: #d68fd3;
+    --accent-400: #c969c4;
+    --accent-500: #bb44b5;
+    --accent-600: #963691;
+    --accent-700: #70296d;
+    --accent-800: #4b1b49;
+    --accent-900: #250e24;
+    --accent-950: #130712;    
+}
+
+html {
+    width: calc(100% - 0px);
+    height: calc(100% - 10px);
+    margin: 0;
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: var(--background);
+}
+.content {
+    font-size: 40px;
+    display: grid;
+    grid-template-columns: 15% 68% 15%;
+    gap: 1%;
+    grid-auto-rows: 5% 50% 11% 30%;
+    grid-template-areas:
+    "a . b"
+    "c c c"
+    ". d ."
+    "e e e";
+    margin: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+}
+@media screen and (min-width: 800px) {
+    .content {
+        grid-template-columns: 7% 41% 41% 7%;
+        grid-auto-rows: 5% 11% 50% 30%;
+        grid-template-areas:
+                "a . . b"
+                ". d d ."
+                "c c e e"
+                "c c e e";
+    }
+}
+nav {
+    display: contents;
+}
+nav .back {
+    background-color: var(--secondary-300);
+    grid-area: a;
+    border-radius: 100vw;
+    background-image: url(./left-arrow.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: var(--secondary-300) solid 2px;
+}
+nav .home {
+    background-color: var(--secondary-300);
+    grid-area: b;
+    border-radius: 100vw;
+    background-image: url(./home.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: var(--secondary-300) solid 5px;
+}
+.video {
+    background-color: var(--background-300);
+    grid-area: c;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 5px;
+}
+.video video {
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    border-radius: 25px;
+    padding: 10px;
+}
+.options {
+    display: grid;
+    background-color: var(--background-200);
+    grid-area: d;
+    border-radius: 100vw;
+    grid-template-columns: 10% 20% 10% 20% 10% 20% 10%;
+    grid-auto-rows: 10% 80% 10%;
+    grid-template-areas: 
+    ". . . . . . ."
+    ". a . b . c ."
+    ". . . . . . .";
+}
+.option-video {
+    grid-area: a;
+    background-color: var(--primary);
+    border-radius: 100vw;
+    background-image: url(./video.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: var(--primary) solid 5px;
+}
+.option-microfon {
+    grid-area: b;
+    background-color: var(--secondary-600);
+    border-radius: 100vw;
+    background-image: url(./microphone.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: var(--secondary-600) solid 5px;
+}
+.option-text {
+    grid-area: c;
+    background-color: var(--accent);
+    border-radius: 100vw;
+    background-image: url(./text.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: var(--accent) solid 5px;
+}
+.text {
+    background-color: var(--background-400);
+    grid-area: e;
+    border-radius: 40px;
+    padding: 20px;
+}
